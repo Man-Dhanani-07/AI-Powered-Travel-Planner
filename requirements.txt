@@ -2,10 +2,11 @@ streamlit
 langchain
 langchain_google_genai
 langchain_community
+langchain_groq
 groq
 openai
 faiss-cpu
 pandas
 numpy
 requests
-langchain_groq
+duckduckgo-search
