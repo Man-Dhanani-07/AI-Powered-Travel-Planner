@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain_google_genai
+langchain_community
+groq
+openai
+faiss-cpu
+pandas
+numpy
+requests
