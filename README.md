@@ -1,4 +1,4 @@
-![Screenshot (4052)](https://github.com/user-attachments/assets/58bb301d-ea86-42d6-ac24-1d3f0aed3be3)# 🧳 AI-Powered Travel Planner
+# 🧳 AI-Powered Travel Planner
 
 An AI-based travel planning assistant that helps users get personalized travel details using LLMs and real-time web search. Built with **LangChain**, **Groq's LLaMA3**, and **Streamlit**.
 
