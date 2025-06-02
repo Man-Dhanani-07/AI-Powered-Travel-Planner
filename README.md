@@ -29,6 +29,8 @@ An AI-based travel planning assistant that helps users get personalized travel d
 
 ---
 
+## 📸 Screenshots
+
 - ![Screenshot (4050)](https://github.com/user-attachments/assets/02997f71-9d9a-497c-93fc-176e450a7fff)
 - ![Screenshot (4051)](https://github.com/user-attachments/assets/5c71ce45-470f-4d5b-b47a-e67abd4f966e)
 - ![Screenshot (4052)](https://github.com/user-attachments/assets/7fd7a402-dae6-47c3-a499-875916dae21a)
