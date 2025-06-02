@@ -1,4 +1,4 @@
-# 🧳 AI-Powered Travel Planner
+![Screenshot (4052)](https://github.com/user-attachments/assets/58bb301d-ea86-42d6-ac24-1d3f0aed3be3)# 🧳 AI-Powered Travel Planner
 
 An AI-based travel planning assistant that helps users get personalized travel details using LLMs and real-time web search. Built with **LangChain**, **Groq's LLaMA3**, and **Streamlit**.
 
@@ -28,3 +28,14 @@ An AI-based travel planning assistant that helps users get personalized travel d
 - **dotenv** - Environment variable handling
 
 ---
+
+- ![Screenshot (4050)](https://github.com/user-attachments/assets/02997f71-9d9a-497c-93fc-176e450a7fff)
+- ![Screenshot (4051)](https://github.com/user-attachments/assets/5c71ce45-470f-4d5b-b47a-e67abd4f966e)
+- ![Screenshot (4052)](https://github.com/user-attachments/assets/7fd7a402-dae6-47c3-a499-875916dae21a)
+- ![Screenshot (4053)](https://github.com/user-attachments/assets/c3b4d0cf-dbfa-4178-a657-d7876d2bda58)
+- ![Screenshot (4054)](https://github.com/user-attachments/assets/ddb257ba-5823-4897-8e94-7c2f8aff97b2)
+
+
+
+
+
