@@ -7,3 +7,5 @@ groq
 openai
 requests
 duckduckgo-search
+google-generativeai
+
