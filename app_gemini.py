@@ -156,7 +156,7 @@ Travel_Dates = st.text_input("📆 Travel Dates (YYYY-MM-DD to YYYY-MM-DD)")
 
 category_options = list(templates.keys())
 selected_category = st.selectbox(
-    "Select the travel info category you want:",
+    "📌 Select the travel info category you want:",
     options=category_options
 )
 
