@@ -128,7 +128,6 @@ templates = {
     )
 }
 
-
 agents = {
     key: initialize_agent(
         [search], llm,
@@ -138,7 +137,6 @@ agents = {
     )
     for key in templates.keys()
 }
-
 
 def get_travel_info(category, **kwargs):
     prompt_text = templates[category].format(**kwargs)
@@ -157,72 +155,65 @@ Planned_Activities = st.text_area("🧳 Planned Activities")
 Travel_Dates = st.text_input("📆 Travel Dates (YYYY-MM-DD to YYYY-MM-DD)")
 
 category_options = list(templates.keys())
-selected_categories = st.multiselect(
-    "Select travel info categories you want:",
-    options=category_options,
-    default=["distance_train", "hotels_food_places"]
+selected_category = st.selectbox(
+    "Select the travel info category you want:",
+    options=category_options
 )
 
 if st.button("Get Travel Plan"):
-    if not selected_categories:
-        st.warning("Please select at least one category.")
-    else:
-        with st.spinner("Fetching travel details..."):
-            results = {}
-            for category in selected_categories:
-                # Pass parameters according to each prompt template
-                if category == "distance_train":
-                    results[category] = get_travel_info(
-                        category,
-                        Departure_City=Departure_City,
-                        Destination_City=Destination_City,
-                        Budget_Amount=Budget_Amount
-                    )
-                elif category == "hotels_food_places":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City,
-                        Budget_Amount=Budget_Amount
-                    )
-                elif category == "itinerary":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City,
-                        Travel_Days=Travel_Days,
-                        Interest_Type=Interest_Type
-                    )
-                elif category == "weather":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City,
-                        Travel_Dates=Travel_Dates
-                    )
-                elif category == "transport":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City
-                    )
-                elif category == "festivals":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City,
-                        Travel_Dates=Travel_Dates
-                    )
-                elif category == "travel_tips":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City
-                    )
-                elif category == "packing_list":
-                    results[category] = get_travel_info(
-                        category,
-                        Destination_City=Destination_City,
-                        Travel_Days=Travel_Days,
-                        Planned_Activities=Planned_Activities
-                    )
-                else:
-                    results[category] = "No handler implemented for this category."
+    with st.spinner("Fetching travel details..."):
+        category = selected_category
+        if category == "distance_train":
+            output = get_travel_info(
+                category,
+                Departure_City=Departure_City,
+                Destination_City=Destination_City,
+                Budget_Amount=Budget_Amount
+            )
+        elif category == "hotels_food_places":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City,
+                Budget_Amount=Budget_Amount
+            )
+        elif category == "itinerary":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City,
+                Travel_Days=Travel_Days,
+                Interest_Type=Interest_Type
+            )
+        elif category == "weather":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City,
+                Travel_Dates=Travel_Dates
+            )
+        elif category == "transport":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City
+            )
+        elif category == "festivals":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City,
+                Travel_Dates=Travel_Dates
+            )
+        elif category == "travel_tips":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City
+            )
+        elif category == "packing_list":
+            output = get_travel_info(
+                category,
+                Destination_City=Destination_City,
+                Travel_Days=Travel_Days,
+                Planned_Activities=Planned_Activities
+            )
+        else:
+            output = "No handler implemented for this category."
 
-            for key, value in results.items():
-                st.subheader(key.replace("_", " ").title())
-                st.markdown(value)
+        st.subheader(category.replace("_", " ").title())
+        st.markdown(output)
