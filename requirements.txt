@@ -5,8 +5,5 @@ langchain_community
 langchain_groq
 groq
 openai
-faiss-cpu
-pandas
-numpy
 requests
 duckduckgo-search
