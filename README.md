@@ -4,6 +4,12 @@ An AI-based travel planning assistant that helps users get personalized travel d
 
 ---
 
+## 🎥 Demo Video
+
+👉 [Watch the demo on YouTube](https://youtu.be/A9vH4R9kHRQ)
+
+---
+
 ## 🔧 Features
 
 - ✅ Travel distance & train/flight suggestions based on budget
